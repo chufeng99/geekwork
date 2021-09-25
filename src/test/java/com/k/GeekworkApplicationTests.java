@@ -1,0 +1,13 @@
+package com.k;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class GeekworkApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
