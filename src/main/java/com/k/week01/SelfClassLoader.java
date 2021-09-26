@@ -15,7 +15,7 @@ public class SelfClassLoader extends ClassLoader {
         try {
             Class<?> aClass = new SelfClassLoader().findClass("Hello");
             for (Method declaredMethod : aClass.getDeclaredMethods()) {
-                System.out.println(declaredMethod.getName());
+                System.out.println("class methods：" + declaredMethod.getName());
             }
             Method method = aClass.getMethod("hello");
             method.invoke(aClass.newInstance());
