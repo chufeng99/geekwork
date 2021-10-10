@@ -1,11 +1,14 @@
 package com.k.week02.io;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 // 每个请求一个线程
+@Slf4j
 public class HttpServer02 {
     public static void main(String[] args) throws IOException{
         ServerSocket serverSocket = new ServerSocket(8802);
@@ -22,6 +25,7 @@ public class HttpServer02 {
     }
     
     private static void service(Socket socket) {
+        log.info("http server 02 accept!!");
         try {
             PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
             printWriter.println("HTTP/1.1 200 OK");
