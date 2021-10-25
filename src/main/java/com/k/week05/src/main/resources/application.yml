@@ -1,0 +1,21 @@
+student:
+  id: 1
+  name: arthur
+
+klass:
+  students:
+    - id: 11
+      name: caocao
+    - id: 12
+      name: zhugeliang
+
+school:
+  klasses:
+    students:
+      - id: 110
+        name: liubei
+      - id: 111
+        name: guanyu
+  student:
+    - id: 120
+      name: zhangfei

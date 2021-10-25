@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=work08.config.StudentConfig,work08.config.KlassConfig,work08.config.SchoolConfig
