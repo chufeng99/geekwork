@@ -3,6 +3,7 @@ package com.k.week01;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -34,6 +35,12 @@ public class SelfClassLoader extends ClassLoader {
 
     @Override
     public Class<?> findClass(String name) throws ClassNotFoundException {
+        String rootPath = this.getClass().getClassLoader().getResource("").getPath();
+        System.out.println(rootPath);
+
+        URL url = SelfClassLoader.class.getResource("");
+        System.out.println(url);
+
         String strPath  = SelfClassLoader.class.getResource("/week01/Hello.xlass").getPath();
         Path path = Paths.get(strPath);
         byte[] bytes = new byte[0];
